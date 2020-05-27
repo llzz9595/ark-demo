@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>manager-ark</artifactId>
+		<groupId>com.badouchain</groupId>
+		<version>2.0.1.RELEASE</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>fabricv2-chaincode-provider</artifactId>
+	<properties>
+		<bdFramework.version>3.1.1.beta.bugfix5</bdFramework.version>
+		<hibernate.version>4.3.11.Final</hibernate.version>
+		<struts.version>2.3.33</struts.version>
+		<junit.version>4.12</junit.version>
+		<springboot.version>1.5.21.RELEASE</springboot.version>
+		<springcloud.version>Dalston.SR5</springcloud.version>
+		<bdc.service.version>2.0.0.RELEASE</bdc.service.version>
+		<springcloud.kubernetes.version>1.0.1.RELEASE</springcloud.kubernetes.version>
+		<fabric8.maven.plugin.version>4.0.0</fabric8.maven.plugin.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.hyperledger.fabric-sdk-java</groupId>
+			<artifactId>fabric-sdk-java</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			 <plugin>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-plugin-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <goals>
+                            <goal>ark-plugin</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>ark-plugin</classifier>
+                            <exported>
+                                <classes>
+                                    <class>com.badouchain.chaincode.fabric.SDKTestV2</class>
+                                </classes>
+                            </exported>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+			<id>sdFramework-public2</id>
+			<url>http://mvnrepository.badousoft.com/nexus/content/repositories/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+
+	</repositories>
+</project>

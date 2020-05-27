@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>manager-ark</artifactId>
+		<groupId>com.badouchain</groupId>
+		<version>2.0.1.RELEASE</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>manager-platform</artifactId>
+	<properties>
+		<junit.version>4.12</junit.version>
+		<springcloud.version>Dalston.SR5</springcloud.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${springcloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<!-- spring-boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${springboot.version}</version>
+		</dependency>
+
+
+
+		<!-- spring-boot 引入结束 -->
+		<dependency>
+			<groupId>com.badouchain</groupId>
+			<artifactId>fabricv1-chaincode-provider</artifactId>
+			<version>2.0.1.RELEASE</version>
+			<classifier>ark-plugin</classifier>
+
+		</dependency>
+
+		<dependency>
+			<groupId>com.badouchain</groupId>
+			<artifactId>fabricv2-chaincode-provider</artifactId>
+			<version>2.0.1.RELEASE</version>
+			<classifier>ark-plugin</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>sofa-ark-springboot-starter</artifactId>
+			<version>1.1.1</version>
+
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-boot</artifactId>
+					<groupId>org.springframework.boot</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.badouchain</groupId>
+			<artifactId>fabricv1-chaincode-provider</artifactId>
+			<version>2.0.1.RELEASE</version>
+			<scope>provide</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.badouchain</groupId>
+			<artifactId>fabricv2-chaincode-provider</artifactId>
+			<version>2.0.1.RELEASE</version>
+			<scope>provide</scope>
+		</dependency>
+
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.alipay.sofa</groupId>
+				<artifactId>sofa-ark-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<executions>
+					<execution>
+						<id>default-cli</id>
+						<!--goal executed to generate executable-ark-jar -->
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<!--specify destination where executable-ark-jar will be saved, default 
+								saved to ${project.build.directory} -->
+							<outputDirectory>./target</outputDirectory>
+							<!--default none, 可执行fat jar -->
+							<arkClassifier>executable-ark</arkClassifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+			<id>sdFramework-public2</id>
+			<url>http://mvnrepository.badousoft.com/nexus/content/repositories/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+
+	</repositories>
+</project>

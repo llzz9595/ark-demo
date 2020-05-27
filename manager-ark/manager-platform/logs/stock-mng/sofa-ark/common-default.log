@@ -1,0 +1,915 @@
+2020-05-26 15:49:48,625 INFO  main                             - Begin to start ArkServiceContainer
+2020-05-26 15:49:49,426 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 15:49:49,426 INFO  main                             - Listening on port: 1234
+2020-05-26 15:49:50,007 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 15:49:50,007 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 15:49:50,007 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 15:49:50,018 INFO  main                             - Finish to start ArkServiceContainer
+2020-05-26 15:49:50,038 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 15:49:50,125 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 15:49:50,125 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 15:49:50,133 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:49:50,134 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:49:50,134 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:49:50,134 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:49:50,134 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:49:50,134 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:49:50,139 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 15:49:50,139 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 15:49:50,141 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 15:49:50,141 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 15:49:50,143 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 15:49:50,143 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 15:49:50,143 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 15:49:50,143 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 15:49:50,144 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 15:49:50,144 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 15:49:50,144 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2020-05-26 15:49:50,164 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2020-05-26 15:49:50,165 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2020-05-26 15:49:50,165 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 15:49:50,165 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2020-05-26 15:49:50,165 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2020-05-26 15:49:50,165 INFO  main                             - Begin to start biz: Startup In IDE
+2020-05-26 15:49:52,909 ERROR main                             - Start biz: Startup In IDE meet error
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 15:49:52,910 ERROR main                             - Process pipeline stage fail: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+com.alipay.sofa.ark.exception.ArkRuntimeException: java.lang.reflect.InvocationTargetException
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:56)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	... 19 common frames omitted
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 15:54:17,500 INFO  main                             - Begin to start ArkServiceContainer
+2020-05-26 15:54:18,151 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 15:54:18,151 INFO  main                             - Listening on port: 1234
+2020-05-26 15:54:18,589 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 15:54:18,590 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 15:54:18,590 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 15:54:18,599 INFO  main                             - Finish to start ArkServiceContainer
+2020-05-26 15:54:18,620 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 15:54:18,696 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 15:54:18,696 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 15:54:18,704 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:54:18,705 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:54:18,705 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:54:18,705 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:54:18,705 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:54:18,705 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 15:54:18,710 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 15:54:18,710 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 15:54:18,711 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 15:54:18,712 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 15:54:18,713 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 15:54:18,713 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 15:54:18,713 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 15:54:18,713 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 15:54:18,714 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 15:54:18,714 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 15:54:18,714 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2020-05-26 15:54:18,730 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2020-05-26 15:54:18,731 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2020-05-26 15:54:18,731 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 15:54:18,731 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2020-05-26 15:54:18,731 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2020-05-26 15:54:18,731 INFO  main                             - Begin to start biz: Startup In IDE
+2020-05-26 15:54:21,334 ERROR main                             - Start biz: Startup In IDE meet error
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 15:54:21,335 ERROR main                             - Process pipeline stage fail: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+com.alipay.sofa.ark.exception.ArkRuntimeException: java.lang.reflect.InvocationTargetException
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:56)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	... 19 common frames omitted
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 15:54:33,832 INFO  Thread-3                         - Begin to stop ArkServiceContainer
+2020-05-26 15:54:33,832 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 15:54:33,832 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 15:54:33,832 INFO  Thread-3                         - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is stopping.
+2020-05-26 15:54:33,833 INFO  Thread-3                         - Begin to stop biz: Startup In IDE
+2020-05-26 15:54:33,834 INFO  Thread-3                         - Finish to stop biz: Startup In IDE
+2020-05-26 15:54:33,834 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 15:54:33,834 INFO  Thread-3                         - Start to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2020-05-26 15:54:33,835 INFO  Thread-3                         - Stop to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2020-05-26 15:54:33,836 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 15:54:33,839 INFO  Thread-3                         - Finish to stop ArkServiceContainer
+2020-05-26 16:07:38,783 INFO  main                             - Begin to start ArkServiceContainer
+2020-05-26 16:07:39,629 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 16:07:39,629 INFO  main                             - Listening on port: 1234
+2020-05-26 16:07:40,167 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 16:07:40,167 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 16:07:40,167 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 16:07:40,174 INFO  main                             - Finish to start ArkServiceContainer
+2020-05-26 16:07:40,193 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:07:40,289 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:07:40,289 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:07:40,301 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:07:40,302 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:07:40,302 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:07:40,302 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:07:40,303 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:07:40,303 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:07:40,309 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:07:40,309 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:07:40,312 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:07:40,312 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:07:40,314 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:07:40,315 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:07:40,315 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:07:40,315 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:07:40,316 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:07:40,316 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:07:40,316 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2020-05-26 16:07:40,337 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2020-05-26 16:07:40,338 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2020-05-26 16:07:40,339 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:07:40,339 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2020-05-26 16:07:40,339 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2020-05-26 16:07:40,339 INFO  main                             - Begin to start biz: Startup In IDE
+2020-05-26 16:07:43,049 ERROR main                             - Start biz: Startup In IDE meet error
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 16:07:43,050 ERROR main                             - Process pipeline stage fail: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+com.alipay.sofa.ark.exception.ArkRuntimeException: java.lang.reflect.InvocationTargetException
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:56)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	... 19 common frames omitted
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 16:09:36,302 INFO  main                             - Begin to start ArkServiceContainer
+2020-05-26 16:09:37,119 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 16:09:37,119 INFO  main                             - Listening on port: 1234
+2020-05-26 16:09:37,518 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 16:09:37,518 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 16:09:37,518 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 16:09:37,527 INFO  main                             - Finish to start ArkServiceContainer
+2020-05-26 16:09:37,547 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:09:37,631 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:09:37,631 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:09:37,640 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:09:37,641 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:09:37,641 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:09:37,641 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:09:37,641 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:09:37,642 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:09:37,646 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:09:37,647 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:09:37,648 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:09:37,649 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:09:37,650 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:09:37,650 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:09:37,650 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:09:37,651 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:09:37,651 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:09:37,651 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:09:37,652 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2020-05-26 16:09:37,670 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2020-05-26 16:09:37,671 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2020-05-26 16:09:37,671 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:09:37,672 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2020-05-26 16:09:37,672 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2020-05-26 16:09:37,672 INFO  main                             - Begin to start biz: Startup In IDE
+2020-05-26 16:09:40,335 ERROR main                             - Start biz: Startup In IDE meet error
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 16:09:40,337 ERROR main                             - Process pipeline stage fail: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+com.alipay.sofa.ark.exception.ArkRuntimeException: java.lang.reflect.InvocationTargetException
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:56)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	... 19 common frames omitted
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 16:10:00,023 INFO  Thread-3                         - Begin to stop ArkServiceContainer
+2020-05-26 16:10:00,024 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 16:10:00,024 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 16:10:00,024 INFO  Thread-3                         - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is stopping.
+2020-05-26 16:10:00,025 INFO  Thread-3                         - Begin to stop biz: Startup In IDE
+2020-05-26 16:10:00,026 INFO  Thread-3                         - Finish to stop biz: Startup In IDE
+2020-05-26 16:10:00,027 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 16:10:00,027 INFO  Thread-3                         - Start to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2020-05-26 16:10:00,028 INFO  Thread-3                         - Stop to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2020-05-26 16:10:00,028 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 16:10:00,029 INFO  Thread-3                         - Finish to stop ArkServiceContainer
+2020-05-26 16:10:44,465 INFO  main                             - Begin to start ArkServiceContainer
+2020-05-26 16:10:45,147 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 16:10:45,147 INFO  main                             - Listening on port: 1234
+2020-05-26 16:10:45,628 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 16:10:45,628 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 16:10:45,628 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 16:10:45,638 INFO  main                             - Finish to start ArkServiceContainer
+2020-05-26 16:10:45,657 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:10:45,737 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:10:45,737 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:10:45,745 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:10:45,746 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:10:45,746 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:10:45,746 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:10:45,747 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:10:45,747 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:10:45,751 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:10:45,751 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:10:45,753 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:10:45,754 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:10:45,755 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:10:45,756 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:10:45,756 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:10:45,756 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:10:45,756 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:10:45,756 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:10:45,757 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2020-05-26 16:10:45,775 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2020-05-26 16:10:45,776 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2020-05-26 16:10:45,776 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:10:45,776 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2020-05-26 16:10:45,776 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2020-05-26 16:10:45,776 INFO  main                             - Begin to start biz: Startup In IDE
+2020-05-26 16:10:48,748 ERROR main                             - Start biz: Startup In IDE meet error
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 16:10:48,749 ERROR main                             - Process pipeline stage fail: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+com.alipay.sofa.ark.exception.ArkRuntimeException: java.lang.reflect.InvocationTargetException
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:56)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	... 19 common frames omitted
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 16:14:29,333 INFO  main                             - Begin to start ArkServiceContainer
+2020-05-26 16:14:30,139 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 16:14:30,139 INFO  main                             - Listening on port: 1234
+2020-05-26 16:14:30,545 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 16:14:30,545 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 16:14:30,545 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 16:14:30,555 INFO  main                             - Finish to start ArkServiceContainer
+2020-05-26 16:14:30,575 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:14:30,654 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:14:30,655 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:14:30,662 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:14:30,662 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:14:30,663 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:14:30,663 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:14:30,663 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:14:30,663 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:14:30,667 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:14:30,668 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:14:30,669 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:14:30,670 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:14:30,671 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:14:30,671 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:14:30,671 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:14:30,671 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:14:30,672 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:14:30,672 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:14:30,672 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2020-05-26 16:14:30,693 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2020-05-26 16:14:30,693 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2020-05-26 16:14:30,693 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:14:30,693 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2020-05-26 16:14:30,694 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2020-05-26 16:14:30,694 INFO  main                             - Begin to start biz: Startup In IDE
+2020-05-26 16:14:33,431 ERROR main                             - Start biz: Startup In IDE meet error
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 16:14:33,432 ERROR main                             - Process pipeline stage fail: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+com.alipay.sofa.ark.exception.ArkRuntimeException: java.lang.reflect.InvocationTargetException
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:56)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	... 19 common frames omitted
+Caused by: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:124)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:13)
+	... 26 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.apache.coyote.AbstractProtocol.setBacklog(I)V
+	at org.springframework.boot.autoconfigure.web.ServerProperties$Tomcat$3.customize(ServerProperties.java:906)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.customizeConnector(TomcatEmbeddedServletContainerFactory.java:336)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:171)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:166)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:136)
+	... 34 common frames omitted
+2020-05-26 16:14:37,816 INFO  Thread-3                         - Begin to stop ArkServiceContainer
+2020-05-26 16:14:37,817 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 16:14:37,817 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 16:14:37,817 INFO  Thread-3                         - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is stopping.
+2020-05-26 16:14:37,817 INFO  Thread-3                         - Begin to stop biz: Startup In IDE
+2020-05-26 16:14:37,818 INFO  Thread-3                         - Finish to stop biz: Startup In IDE
+2020-05-26 16:14:37,819 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 16:14:37,819 INFO  Thread-3                         - Start to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2020-05-26 16:14:37,820 INFO  Thread-3                         - Stop to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2020-05-26 16:14:37,820 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 16:14:37,822 INFO  Thread-3                         - Finish to stop ArkServiceContainer
+2020-05-26 16:27:20,502 INFO  main                             - Begin to start ArkServiceContainer
+2020-05-26 16:27:21,344 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 16:27:21,344 INFO  main                             - Listening on port: 1234
+2020-05-26 16:27:21,761 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 16:27:21,762 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 16:27:21,762 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 16:27:21,774 INFO  main                             - Finish to start ArkServiceContainer
+2020-05-26 16:27:21,793 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:27:21,814 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2020-05-26 16:27:21,814 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:27:21,821 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:27:21,821 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:27:21,821 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:27:21,821 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:27:21,822 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:27:21,822 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2020-05-26 16:27:21,826 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:27:21,826 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:27:21,827 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:27:21,828 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:27:21,829 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2020-05-26 16:27:21,829 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2020-05-26 16:27:21,829 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2020-05-26 16:27:21,829 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:27:21,830 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2020-05-26 16:27:21,830 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:27:21,830 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2020-05-26 16:27:21,830 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2020-05-26 16:27:21,830 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2020-05-26 16:27:21,830 INFO  main                             - Begin to start biz: Startup In IDE
+2020-05-26 16:27:23,915 ERROR main                             - Start biz: Startup In IDE meet error
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: com/badouchain/chaincode/fabric/SDKTestV1
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:15)
+	... 26 common frames omitted
+Caused by: com.alipay.sofa.ark.exception.ArkLoaderException: [ArkBiz Loader] Startup In IDE:Mock version : can not load class: com.badouchain.chaincode.fabric.SDKTestV1
+	at com.alipay.sofa.ark.container.service.classloader.BizClassLoader.loadClassInternal(BizClassLoader.java:118)
+	at com.alipay.sofa.ark.container.service.classloader.AbstractClasspathClassLoader.loadClass(AbstractClasspathClassLoader.java:71)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 27 common frames omitted
+2020-05-26 16:27:23,916 ERROR main                             - Process pipeline stage fail: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+com.alipay.sofa.ark.exception.ArkRuntimeException: java.lang.reflect.InvocationTargetException
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:56)
+	at com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl.deploy(BizDeployServiceImpl.java:55)
+	at com.alipay.sofa.ark.container.pipeline.DeployBizStage.process(DeployBizStage.java:46)
+	at com.alipay.sofa.ark.container.pipeline.StandardPipeline.process(StandardPipeline.java:75)
+	at com.alipay.sofa.ark.container.ArkContainer.start(ArkContainer.java:143)
+	at com.alipay.sofa.ark.container.ArkContainer.main(ArkContainer.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:97)
+	at com.alipay.sofa.ark.bootstrap.AbstractLauncher.launch(AbstractLauncher.java:68)
+	at com.alipay.sofa.ark.support.startup.SofaArkBootstrap.remain(SofaArkBootstrap.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.support.thread.LaunchRunner.run(LaunchRunner.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.alipay.sofa.ark.bootstrap.MainMethodRunner.run(MainMethodRunner.java:48)
+	at com.alipay.sofa.ark.container.model.BizModel.start(BizModel.java:245)
+	at com.alipay.sofa.ark.container.service.biz.DefaultBizDeployer.deploy(DefaultBizDeployer.java:52)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/badouchain/chaincode/fabric/SDKTestV1
+	at com.badouchain.ManagerApplication.main(ManagerApplication.java:15)
+	... 26 common frames omitted
+Caused by: com.alipay.sofa.ark.exception.ArkLoaderException: [ArkBiz Loader] Startup In IDE:Mock version : can not load class: com.badouchain.chaincode.fabric.SDKTestV1
+	at com.alipay.sofa.ark.container.service.classloader.BizClassLoader.loadClassInternal(BizClassLoader.java:118)
+	at com.alipay.sofa.ark.container.service.classloader.AbstractClasspathClassLoader.loadClass(AbstractClasspathClassLoader.java:71)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 27 common frames omitted
+2020-05-26 16:27:27,332 INFO  Thread-3                         - Begin to stop ArkServiceContainer
+2020-05-26 16:27:27,332 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2020-05-26 16:27:27,332 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2020-05-26 16:27:27,332 INFO  Thread-3                         - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is stopping.
+2020-05-26 16:27:27,333 INFO  Thread-3                         - Begin to stop biz: Startup In IDE
+2020-05-26 16:27:27,335 INFO  Thread-3                         - Finish to stop biz: Startup In IDE
+2020-05-26 16:27:27,336 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2020-05-26 16:27:27,336 INFO  Thread-3                         - Dispose service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2020-05-26 16:27:27,339 INFO  Thread-3                         - Finish to stop ArkServiceContainer
